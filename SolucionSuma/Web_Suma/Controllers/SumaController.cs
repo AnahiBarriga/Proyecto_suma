@@ -11,7 +11,12 @@ namespace Web_Suma.Controllers
     public class SumaController : Controller
     {
         [HttpGet]
-         public int suma(int num1, int num2)
+        public int suma(int num1, int num2)
+        {
+            return num1 + num2;
+        }
+        [HttpPost]
+        public int sumar([FromHeader]int num1, [FromHeader] int num2)
         {
             return num1 + num2;
         }
